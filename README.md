@@ -31,7 +31,7 @@ A beginner-friendly real-time chat application built using **Node.js**, **Expres
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/realtime-chat-app.git
+git clone https://github.com/hauwajibrilibrahim/3mtt-realtime-chat-app.git
 cd realtime-chat-app
 ```
 
