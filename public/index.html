@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatMe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #b388ff, #8c9eff);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chat-wrapper {
+      background-color: #eae7f2;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 600px;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    header {
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      color: white;
+      padding: 16px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #messages {
+      list-style: none;
+      flex-grow: 1;
+      padding: 16px;
+      overflow-y: auto;
+      margin: 0;
+    }
+
+    .message {
+      margin-bottom: 16px;
+      max-width: 70%;
+      padding: 12px;
+      border-radius: 12px;
+      word-wrap: break-word;
+      position: relative;
+    }
+
+    .message.you {
+      background-color: #d1c4e9;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .message.other {
+      background-color: #b39ddb;
+      margin-right: auto;
+    }
+
+    .username {
+      font-weight: bold;
+      font-size: 0.85em;
+      margin-bottom: 4px;
+      display: block;
+      color: #555;
+    }
+
+    .timestamp {
+      font-size: 0.75em;
+      color: #888;
+      position: absolute;
+      bottom: 0.8px;
+      right: 12px;
+    }
+
+    .input-area {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-top: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    input {
+      flex-grow: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      outline: none;
+    }
+
+    .send-btn {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 10px 14px;
+      margin-left: 8px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      color: white;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-wrapper">
+    <header>ChatMe</header>
+    <ul id="messages"></ul>
+    <div class="input-area">
+      <input id="messageInput" autocomplete="off" placeholder="Chat here..." />
+      <button class="send-btn" id="sendButton">&#10148;</button>
+    </div>
+  </div>
+  <footer>Made by 🤍 Hauwa’u</footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
