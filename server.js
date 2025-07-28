@@ -3,7 +3,7 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const mongoose = require('mongoose');
-const Message = require('./models/message');
+const Message = require('./server/models/message');
 const cors = require('cors');
 const path = require('path');
 
